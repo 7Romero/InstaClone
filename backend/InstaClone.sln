@@ -3,11 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.OpenIddict", "src\InstaClone.OpenIddict\InstaClone.OpenIddict.csproj", "{8BBFECC8-C2D4-4A52-AC65-A511AEF61100}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenIdDict", "OpenIdDict", "{B753E9B0-59D0-4C06-8DAE-228090A0BCCC}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BBFECC8-C2D4-4A52-AC65-A511AEF61100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBFECC8-C2D4-4A52-AC65-A511AEF61100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBFECC8-C2D4-4A52-AC65-A511AEF61100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BBFECC8-C2D4-4A52-AC65-A511AEF61100}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8BBFECC8-C2D4-4A52-AC65-A511AEF61100} = {B753E9B0-59D0-4C06-8DAE-228090A0BCCC}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C5A3ECD1-3E71-4CDB-B63F-AAB7ACD18938}
+		SolutionGuid = {F836816B-9920-43A4-BE44-DBE9C2ED901D}
 	EndGlobalSection
 EndGlobal
