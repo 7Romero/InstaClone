@@ -1,0 +1,20 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 20px;
+  background-color: aquamarine; // temporary
+}
+
+.main {
+  flex: 1 1 auto;
+  padding: 20px;
+}
+
+.footer {
+  padding: 20px;
+  background-color: aqua; // temporary
+}

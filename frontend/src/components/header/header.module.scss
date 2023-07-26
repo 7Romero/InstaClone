@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  a {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.links {
+  margin: 0 0 0 50px;
+  flex: 1 1 auto;
+  a {
+    margin: 0 0 0 15px;
+    padding: 5px;
+    font-size: 16px;
+
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
+  }
+}
+
+.auth {
+  a {
+    padding: 5px;
+    margin: 0 0 0 15px;
+    font-size: 16px;
+
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
+  }
+}
