@@ -1,4 +1,4 @@
-import type { AuthOptions, User } from "next-auth";
+import type { AuthOptions } from "next-auth";
 
 export const authConfig: AuthOptions = {
   providers: [
