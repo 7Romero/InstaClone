@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Quartz;
+using System;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
 namespace InstaClone.OpenIddict;
@@ -26,7 +27,6 @@ public class Startup
         services.AddDbContext<ApplicationDbContext>(options =>
         {
             // Configure the context to use sqlite.
-            //options.UseSqlServer($"Filename={Path.Combine(Path.GetTempPath(), "openiddict-velusia-server.sqlite3")}");
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
 
             // Register the entity sets needed by OpenIddict.
@@ -38,7 +38,7 @@ public class Startup
         services.AddDatabaseDeveloperPageExceptionFilter();
 
         // Register the Identity services.
-        services.AddIdentity<ApplicationUser, IdentityRole>()
+        services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders()
             .AddDefaultUI();
@@ -111,6 +111,10 @@ public class Startup
         // Register the worker responsible for seeding the database.
         // Note: in a real world application, this step should be part of a setup script.
         services.AddHostedService<Worker>();
+
+        // Add AutoMapper
+
+        services.AddAutoMapper(typeof(Startup));
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
