@@ -14,10 +14,10 @@ namespace InstaClone.OpenIddict;
 
 public class Startup
 {
-    public Startup(IConfiguration configuration)
-        => Configuration = configuration;
+    private IConfiguration _configuration { get; }
 
-    public IConfiguration Configuration { get; }
+    public Startup(IConfiguration configuration)
+        => _configuration = configuration;
 
     public void ConfigureServices(IServiceCollection services)
     {
@@ -27,7 +27,7 @@ public class Startup
         services.AddDbContext<ApplicationDbContext>(options =>
         {
             // Configure the context to use sqlite.
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
 
             // Register the entity sets needed by OpenIddict.
             // Note: use the generic overload if you need
@@ -76,7 +76,8 @@ public class Startup
                 options.SetAuthorizationEndpointUris("connect/authorize")
                        .SetLogoutEndpointUris("connect/logout")
                        .SetTokenEndpointUris("connect/token")
-                       .SetUserinfoEndpointUris("connect/userinfo");
+                       .SetUserinfoEndpointUris("connect/userinfo")
+                       .SetIntrospectionEndpointUris("connect/introspect");
 
                 // Mark the "email", "profile" and "roles" scopes as supported scopes.
                 options.RegisterScopes(Scopes.Email, Scopes.Profile, Scopes.Roles);
@@ -113,8 +114,13 @@ public class Startup
         services.AddHostedService<Worker>();
 
         // Add AutoMapper
-
         services.AddAutoMapper(typeof(Startup));
+
+        services.AddAuthentication().AddGoogle(googleOptions =>
+        {
+            googleOptions.ClientId = _configuration["Authentication:Google:ClientId"];
+            googleOptions.ClientSecret = _configuration["Authentication:Google:ClientSecret"];
+        });
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -30,6 +30,7 @@ public class Worker : IHostedService
             await manager.CreateAsync(new OpenIddictApplicationDescriptor
             {
                 ClientId = "nextjs",
+                Type = ClientTypes.Public,
                 ConsentType = ConsentTypes.Implicit,
                 DisplayName = "nextjs web application",
                 RedirectUris =
@@ -49,7 +50,40 @@ public class Worker : IHostedService
                     Permissions.ResponseTypes.Code,
                     Permissions.Scopes.Email,
                     Permissions.Scopes.Profile,
-                    Permissions.Scopes.Roles
+                    Permissions.Scopes.Roles,
+
+                    Permissions.Prefixes.Scope + "api1",
+                },
+                Requirements =
+                {
+                    Requirements.Features.ProofKeyForCodeExchange,
+                },
+            });
+        }
+
+        if (await manager.FindByClientIdAsync("resource_server_1") is null)
+        {
+            await manager.CreateAsync(new OpenIddictApplicationDescriptor
+            {
+                ClientId = "resource_server_1",
+                ClientSecret = "846B62D0-DEF9-4215-A99D-86E6B8DAB342",
+                Permissions =
+                {
+                    Permissions.Endpoints.Introspection
+                }
+            });
+        }
+
+        var scopeManager = scope.ServiceProvider.GetRequiredService<IOpenIddictScopeManager>();
+
+        if (await scopeManager.FindByNameAsync("api1") == null)
+        {
+            await scopeManager.CreateAsync(new OpenIddictScopeDescriptor
+            {
+                Name = "api1",
+                Resources =
+                {
+                    "resource_server_1"
                 }
             });
         }

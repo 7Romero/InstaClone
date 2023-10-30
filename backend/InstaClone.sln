@@ -11,9 +11,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserManagement", "UserManag
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeneralDto", "GeneralDto", "{495C35A3-3F31-4FD0-9617-C0231662A7EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaClone.UserManagement.API", "src\InstaClone.UserManagement.API\InstaClone.UserManagement.API.csproj", "{FEE93B57-E8A7-47F3-B71D-470D868F07F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.UserManagement.API", "src\InstaClone.UserManagement.API\InstaClone.UserManagement.API.csproj", "{FEE93B57-E8A7-47F3-B71D-470D868F07F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaClone.GeneralDto", "src\InstaClone.GeneralDto\InstaClone.GeneralDto.csproj", "{EC25CF03-34BB-4110-97C6-4AE65049C88E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.GeneralDto", "src\InstaClone.GeneralDto\InstaClone.GeneralDto.csproj", "{EC25CF03-34BB-4110-97C6-4AE65049C88E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.UserManagement.Infrastructure", "src\InstaClone.UserManagement.Infrastructure\InstaClone.UserManagement.Infrastructure.csproj", "{D0EE5659-3CFD-43E7-82E6-3CCE87F6C70C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.UserManagement.Core", "src\InstaClone.UserManagement.Core\InstaClone.UserManagement.Core.csproj", "{852012A7-0E47-4C65-9A34-F618B64A3AC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.UserManagement.Dal", "src\InstaClone.UserManagement.Dal\InstaClone.UserManagement.Dal.csproj", "{680400E5-F33E-4FA3-88F5-D867993DEE2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.UserManagement.Application", "src\InstaClone.UserManagement.Application\InstaClone.UserManagement.Application.csproj", "{F4550F85-FDA6-4CA0-82F3-08D25185D6B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostManagement", "PostManagement", "{069DB884-FE80-4EEA-9F39-19B3B947BCA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.PostManagement.API", "src\InstaClone.PostManagement.API\InstaClone.PostManagement.API.csproj", "{A5D9E254-64A7-4934-AF9F-83FF6FBF5F64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.PostManagement.Application", "src\InstaClone.PostManagement.Application\InstaClone.PostManagement.Application.csproj", "{18DDD698-045E-4E63-8B1B-AEEF792D7D84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.PostManagement.Core", "src\InstaClone.PostManagement.Core\InstaClone.PostManagement.Core.csproj", "{F5A56AD7-EC03-43A6-9F0A-3813C325D0B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.PostManagement.Dal", "src\InstaClone.PostManagement.Dal\InstaClone.PostManagement.Dal.csproj", "{4AC74107-E753-4517-B1A1-B7DE100D1F7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaClone.PostManagement.Infrastructure", "src\InstaClone.PostManagement.Infrastructure\InstaClone.PostManagement.Infrastructure.csproj", "{B398F8FB-A167-413C-9317-73DC3B91F805}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{356735DA-BA2D-4B6E-A906-F12A4CB62753}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaClone.Gateway.API", "src\InstaClone.Gateway.API\InstaClone.Gateway.API.csproj", "{6FA6113D-049C-427F-9CAF-939D758CEDD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +57,46 @@ Global
 		{EC25CF03-34BB-4110-97C6-4AE65049C88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC25CF03-34BB-4110-97C6-4AE65049C88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC25CF03-34BB-4110-97C6-4AE65049C88E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EE5659-3CFD-43E7-82E6-3CCE87F6C70C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EE5659-3CFD-43E7-82E6-3CCE87F6C70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EE5659-3CFD-43E7-82E6-3CCE87F6C70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EE5659-3CFD-43E7-82E6-3CCE87F6C70C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{852012A7-0E47-4C65-9A34-F618B64A3AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{852012A7-0E47-4C65-9A34-F618B64A3AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{852012A7-0E47-4C65-9A34-F618B64A3AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{852012A7-0E47-4C65-9A34-F618B64A3AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680400E5-F33E-4FA3-88F5-D867993DEE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680400E5-F33E-4FA3-88F5-D867993DEE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680400E5-F33E-4FA3-88F5-D867993DEE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680400E5-F33E-4FA3-88F5-D867993DEE2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4550F85-FDA6-4CA0-82F3-08D25185D6B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4550F85-FDA6-4CA0-82F3-08D25185D6B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4550F85-FDA6-4CA0-82F3-08D25185D6B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4550F85-FDA6-4CA0-82F3-08D25185D6B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5D9E254-64A7-4934-AF9F-83FF6FBF5F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D9E254-64A7-4934-AF9F-83FF6FBF5F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D9E254-64A7-4934-AF9F-83FF6FBF5F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D9E254-64A7-4934-AF9F-83FF6FBF5F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18DDD698-045E-4E63-8B1B-AEEF792D7D84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18DDD698-045E-4E63-8B1B-AEEF792D7D84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18DDD698-045E-4E63-8B1B-AEEF792D7D84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18DDD698-045E-4E63-8B1B-AEEF792D7D84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A56AD7-EC03-43A6-9F0A-3813C325D0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A56AD7-EC03-43A6-9F0A-3813C325D0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A56AD7-EC03-43A6-9F0A-3813C325D0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A56AD7-EC03-43A6-9F0A-3813C325D0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC74107-E753-4517-B1A1-B7DE100D1F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC74107-E753-4517-B1A1-B7DE100D1F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC74107-E753-4517-B1A1-B7DE100D1F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC74107-E753-4517-B1A1-B7DE100D1F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B398F8FB-A167-413C-9317-73DC3B91F805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B398F8FB-A167-413C-9317-73DC3B91F805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B398F8FB-A167-413C-9317-73DC3B91F805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B398F8FB-A167-413C-9317-73DC3B91F805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA6113D-049C-427F-9CAF-939D758CEDD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA6113D-049C-427F-9CAF-939D758CEDD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA6113D-049C-427F-9CAF-939D758CEDD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA6113D-049C-427F-9CAF-939D758CEDD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +105,16 @@ Global
 		{8BBFECC8-C2D4-4A52-AC65-A511AEF61100} = {B753E9B0-59D0-4C06-8DAE-228090A0BCCC}
 		{FEE93B57-E8A7-47F3-B71D-470D868F07F7} = {14DBBC51-574C-4978-86C1-CDA460F26186}
 		{EC25CF03-34BB-4110-97C6-4AE65049C88E} = {495C35A3-3F31-4FD0-9617-C0231662A7EA}
+		{D0EE5659-3CFD-43E7-82E6-3CCE87F6C70C} = {14DBBC51-574C-4978-86C1-CDA460F26186}
+		{852012A7-0E47-4C65-9A34-F618B64A3AC6} = {14DBBC51-574C-4978-86C1-CDA460F26186}
+		{680400E5-F33E-4FA3-88F5-D867993DEE2B} = {14DBBC51-574C-4978-86C1-CDA460F26186}
+		{F4550F85-FDA6-4CA0-82F3-08D25185D6B5} = {14DBBC51-574C-4978-86C1-CDA460F26186}
+		{A5D9E254-64A7-4934-AF9F-83FF6FBF5F64} = {069DB884-FE80-4EEA-9F39-19B3B947BCA6}
+		{18DDD698-045E-4E63-8B1B-AEEF792D7D84} = {069DB884-FE80-4EEA-9F39-19B3B947BCA6}
+		{F5A56AD7-EC03-43A6-9F0A-3813C325D0B6} = {069DB884-FE80-4EEA-9F39-19B3B947BCA6}
+		{4AC74107-E753-4517-B1A1-B7DE100D1F7B} = {069DB884-FE80-4EEA-9F39-19B3B947BCA6}
+		{B398F8FB-A167-413C-9317-73DC3B91F805} = {069DB884-FE80-4EEA-9F39-19B3B947BCA6}
+		{6FA6113D-049C-427F-9CAF-939D758CEDD2} = {356735DA-BA2D-4B6E-A906-F12A4CB62753}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F836816B-9920-43A4-BE44-DBE9C2ED901D}
